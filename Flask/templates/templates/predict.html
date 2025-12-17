@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Predict</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #7d4ec2; color: #fff; }
+    .form-container { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 8px; margin-top: 30px; }
+    label { color: #fff; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Employee Productivity Prediction Using ML</a>
+  <div>
+    <a class="btn btn-info btn-sm" href="/">Home</a>
+    <a class="btn btn-info btn-sm" href="/about">About</a>
+    <a class="btn btn-info btn-sm" href="/predict">Predict</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="form-container">
+    <form action="/pred" method="post">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>quarter</label>
+            <input class="form-control" name="quarter" required>
+          </div>
+          <div class="form-group"><label>day</label><input class="form-control" name="day" required></div>
+          <div class="form-group"><label>targeted_productivity</label><input class="form-control" name="targeted_productivity" required></div>
+          <div class="form-group"><label>over_time</label><input class="form-control" name="over_time"></div>
+          <div class="form-group"><label>idle_time</label><input class="form-control" name="idle_time"></div>
+          <div class="form-group"><label>no_of_style_change</label><input class="form-control" name="no_of_style_change"></div>
+          <div class="form-group"><label>month</label><input class="form-control" name="month" required></div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group"><label>department</label><input class="form-control" name="department" required></div>
+          <div class="form-group"><label>team</label><input class="form-control" name="team"></div>
+          <div class="form-group"><label>smv</label><input class="form-control" name="smv"></div>
+          <div class="form-group"><label>incentive</label><input class="form-control" name="incentive"></div>
+          <div class="form-group"><label>idle_men</label><input class="form-control" name="idle_men"></div>
+          <div class="form-group"><label>no_of_workers</label><input class="form-control" name="no_of_workers"></div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success mt-3">SUBMIT</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

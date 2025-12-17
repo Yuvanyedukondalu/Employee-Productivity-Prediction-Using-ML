@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Result</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Employee Productivity Prediction Using ML</a>
+  <div>
+    <a class="btn btn-info btn-sm" href="/">Home</a>
+    <a class="btn btn-info btn-sm" href="/about">About</a>
+    <a class="btn btn-info btn-sm" href="/predict">Predict</a>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="alert alert-info">
+    <h4>Based on the given input, the employee productivity level is <strong>{{ label }}</strong>.</h4>
+    <p>Predicted productivity score: <strong>{{ prediction }}</strong></p>
+  </div>
+  <a class="btn btn-primary" href="/predict">Make another prediction</a>
+</div>
+</body>
+</html>
+</html>
